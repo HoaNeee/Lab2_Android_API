@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (sinhviens && sinhviens.length > 0) { %>
+                <% sinhviens.forEach(function(sinhvien) { %>
+                    <tr>
+                        <td><%= sinhvien.masv %></td> 
+                        <td><%= sinhvien.tensv %></td>
+                    </tr>
+                <% }); %>
+            <% } else { %>
+                <tr>
+                    <td colspan="2">Không có sinh viên nào.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
